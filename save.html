@@ -1,0 +1,261 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore and Find Your Interests - EduSport Hub</title>
+  <style>
+    :root {
+      --primary: #4a6bff;
+      --secondary: #ff6b6b;
+      --dark: #2c3e50;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--dark);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+    }
+
+    .interest-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: nowrap;
+    }
+
+    .interest-box {
+      flex: 1;
+      min-width: 30%;
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+    }
+
+    .interest-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+    }
+
+    .interest-box > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .interest-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .interest-box p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      background: var(--primary);
+      color: white;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-column a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .interest-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .interest-box {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">HOME PAGE</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore and Find Your Interests</h1>
+      <p>Discover opportunities in Sports, Academics, or Both!</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="section-title">Choose Your Path</div>
+    <div class="interest-container">
+      <!-- Sports Box -->
+      <div class="interest-box" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/037/236/751/small/ai-generated-beautuful-sporting-background-with-copy-space-free-photo.jpg');">
+        <h3>Sports</h3>
+        <p>Unlock your athletic potential through our elite sports programs.</p>
+        <a href="hii 2.html" class="btn">Explore Sports</a>
+
+      </div>
+
+      <!-- Academics Box -->
+      <div class="interest-box" style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240910/pngtree-global-education-academic-success-with-books-and-globe-image_16145099.jpg');">
+        <h3>Academics</h3>
+        <p>Pursue excellence in education across a wide range of disciplines.</p>
+        <a href="academics.html" class="btn">Explore Your interest Courses</a>
+      </div>
+
+      <!-- Sports & Academics Box -->
+      <div class="interest-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5rwJOlNGDKa611c_NXOdVFa_vwNFzBo--Uw&s');">
+        <h3>Sports & Academics</h3>
+        <p>Balance physical performance and academic excellence with our dual-focus programs.</p>
+        <button class="btn">Explore Both</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <!-- Footer columns if needed -->
+    </div>
+  </footer>
+</body>
+</html>
+

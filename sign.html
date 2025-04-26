@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20221030/pngtree-digital-data-paper-background-with-signup-concept-for-web-development-photo-image_25653640.jpg'); /* Add your background image URL here */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.8); /* Black with transparency */
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 450px;
+      animation: fadeIn 1s ease;
+      color: white; /* Text color white for contrast */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #32CD32; /* Green color for the heading */
+      font-weight: bold;
+    }
+
+    .form-heading {
+      <div class="register-link" style="text-align: center; margin-top: 20px;">
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #32CD32; /* Green color for the subheading */
+      font-weight: normal;
+    }
+
+    label {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select, input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      box-sizing: border-box;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, select:focus, input[type="number"]:focus {
+      border-color: #4A90E2;
+      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+
+    button {
+      background-color: #4A90E2;
+      color: white;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .shake {
+      animation: shake 0.5s ease;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .conditional-fields {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Sign Up Form</h2>
+    <div class="form-heading">Fill the Details</div>
+    <form id="signup-form">
+      <!-- First Name and Last Name -->
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        <div id="first-name-error" class="error">First Name is required</div>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+        <div id="last-name-error" class="error">Last Name is required</div>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+        <div id="age-error" class="error">Age is required</div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <div id="email-error" class="error">Please enter a valid email</div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <div id="phone-error" class="error">Phone number is required</div>
+      </div>
+
+      <!-- Conditional Fields for Under 12 or 12 -->
+      <div class="conditional-fields" id="conditional-fields">
+        <!-- Class for under 12 -->
+        <div class="form-group">
+          <label for="current-class">Current Class</label>
+          <select id="current-class" name="current-class">
+            <option value="">Select your current class</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+            <option value="11">Class 11</option>
+            <option value="12">Class 12</option>
+            <option value="graduation">Graduation</option>
+          </select>
+          <div id="class-error" class="error">Class selection is required</div>
+        </div>
+      </div>
+
+      <!-- Graduation Course and Year for over 12 -->
+      <div class="conditional-fields" id="graduation-fields">
+        <div class="form-group">
+          <label for="graduation-course">Graduation Course</label>
+          <input type="text" id="graduation-course" name="graduation-course" placeholder="Enter your graduation course">
+          <div id="graduation-course-error" class="error">Graduation course is required</div>
+        </div>
+
+        <div class="form-group">
+          <label for="graduation-year">Graduation Completion Year</label>
+          <input type="number" id="graduation-year" name="graduation-year" placeholder="Enter your graduation year">
+          <div id="graduation-year-error" class="error">Graduation year is required</div>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div id="password-error" class="error">Password is required</div>
+      </div>
+
+      <button type="submit">Sign Up</button>
+
+    </form>
+<div class="register-link" style="text-align: center; margin-top: 20px;">
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+  </div>
+
+  <script>
+    // Function to toggle the display of conditional fields based on the user's age
+    function toggleConditionalFields() {
+      const age = document.getElementById('age').value;
+      const conditionalFields = document.getElementById('conditional-fields');
+      const graduationFields = document.getElementById('graduation-fields');
+      
+      if (age <= 12) {
+        conditionalFields.style.display = 'block';
+        graduationFields.style.display = 'none';
+      } else {
+        conditionalFields.style.display = 'none';
+        graduationFields.style.display = 'block';
+      }
+    }
+
+    // Event listener for age input to show/hide the conditional fields
+    document.getElementById('age').addEventListener('input', toggleConditionalFields);
+
+    // Event listener for form submission
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Clear previous error messages
+      document.querySelectorAll('.error').forEach(function(el) {
+        el.style.display = 'none';
+      });
+
+      // Get form inputs
+      const firstName = document.getElementById('first-name');
+      const lastName = document.getElementById('last-name');
+      const age = document.getElementById('age');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+      const currentClass = document.getElementById('current-class');
+      const graduationCourse = document.getElementById('graduation-course');
+      const graduationYear = document.getElementById('graduation-year');
+      const password = document.getElementById('password');
+      
+      let formValid = true;
+
+      // Validate First Name
+      if (firstName.value.trim() === "") {
+        formValid = false;
+        document.getElementById('first-name-error').style.display = 'block';
+        firstName.classList.add('shake');
+      }
+
+      // Validate Last Name
+      if (lastName.value.trim() === "") {
+        formValid = false;
+        document.getElementById('last-name-error').style.display = 'block';
+        lastName.classList.add('shake');
+      }
+
+      // Validate Age
+      if (age.value.trim() === "") {
+        formValid = false;
+        document.getElementById('age-error').style.display = 'block';
+        age.classList.add('shake');
+      }
+
+      // Validate Current Class (if under 12)
+      if (age.value <= 12 && currentClass.value === "") {
+        formValid = false;
+        document.getElementById('class-error').style.display = 'block';
+        currentClass.classList.add('shake');
+      }
+
+      // Validate Graduation Course and Year (if over 12)
+      if (age.value > 12 && graduationCourse.value.trim() === "") {
+        formValid = false;
+        document.getElementById('graduation-course-error').style.display = 'block';
+        graduationCourse.classList.add('shake');
+      }
+
+      if (age.value > 12 && graduationYear.value.trim() === "") {
+        formValid = false;
+        document.getElementById('graduation-year-error').style.display = 'block';
+        graduationYear.classList.add('shake');
+      }
+
+      // Validate Password
+      if (password.value.trim() === "") {
+        formValid = false;
+        document.getElementById('password-error').style.display = 'block';
+        password.classList.add('shake');
+      }
+
+      if (formValid) {
+        alert('Form submitted successfully!');
+        // Form submission logic here
+      }
+    });
+
+    // Initial call to display conditional fields when the page loads
+    toggleConditionalFields();
+  </script>
+</body>
+</html>
+
