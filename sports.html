@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports and University Recommendations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA4L3Jhd3BpeGVsX29mZmljZV8zM19saWdodF9wdXJwbGVfa2lud2FzaGlfcGFwZXJfdGV4dHVyZV9jYXJkYm9hcl9jOGZlMjk3Yi0wNTdlLTRjZWItYTliOS0yMmMwNTQyODM2NjJfMS5qcGc.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; /* You can also use 'center' if preferred */
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto; /* Optional: for horizontal scroll if many items */
+    }
+
+    .box {
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      width: 280px;
+      height: 420px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+    }
+
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .box h2 {
+      margin: 15px 0 10px;
+      color: #007bff;
+    }
+
+    .box p {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explore Sports and University Programs</h1>
+
+  <div class="container">
+    <a href="Football.html" class="box">
+      <img src="https://cdn.britannica.com/31/183231-050-8D8EB720/Carli-Lloyd-penalty-goal-semifinal-match-Germany-2015.jpg" alt="Football" />
+      <h2>Football</h2>
+      <p>Join the world of football and enhance your skills.</p>
+    </a>
+
+    <a href="Basket.html" class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SIhIwS6OVHrGIRa_G_G_kMIg3xktu0I4WQ&s" alt="Basketball" />
+      <h2>Basketball</h2>
+      <p>Develop your game with top-tier coaching.</p>
+    </a>
+
+    <a href="cricket.html" class="box">
+      <img src="https://c.ndtvimg.com/2024-12/11649h28_virat-kohli_625x300_16_December_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605" alt="Cricket" />
+      <h2>Cricket</h2>
+      <p>Master the art of cricket with expert guidance.</p>
+    </a>
+
+    <a href="bad.html" class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTmLqXXJ-sgP2pkrzx7hSpAvTP0SKygLpJg&s" alt="Badminton" />
+      <h2>Badminton</h2>
+      <p>Sharpen your badminton skills and compete at higher levels.</p>
+    </a>
+
+    <a href="swimm.html" class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTix_7MyUGehu7-IgXxCpCz5TttdCoZnshCEQ&s" alt="Swimming" />
+      <h2>Swimming</h2>
+      <p>Enhance your swimming techniques with professional coaching.</p>
+    </a>
+
+    <a href="wrest.html" class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs--mCZa-b2ojnDfYwMHc_vK6g5hZcXMDVCg&s" alt="Wrestling" />
+      <h2>Wrestling</h2>
+      <p>Push your limits in Wrestling.</p>
+    </a>
+
+    <a href="ath.html" class="box">
+      <img src="https://cdn.britannica.com/09/255209-050-34F7548B/Daley-Thompson-javelin-throw-Decathlon-Moscow-1980-Olympics.jpg" alt="Athletics" />
+      <h2>Athletics</h2>
+      <p>Push your limits in various athletic disciplines.</p>
+    </a>
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsVYH8uLVnE0BEnCtVTtBCpaFP0OJMpwv6kA&s" alt="Boxing" />
+      <h2>Boxing</h2>
+      <p>Push your limits in Boxing.</p>
+    </div>
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR1imvLSkJTzSxAfbKZop9f2Er7PB5KHysOg&s" alt="Golf" />
+      <h2>Golf</h2>
+      <p>Enjoy playing Golf.</p>
+    </div>
+
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT3i5ikFwaoG8I394wewOnOY7uVOXIoBlt3Q&s" alt="Gymnastics" />
+      <h2>Gymnastics</h2>
+      <p>Push your limits in various Gymnastics disciplines.</p>
+    </div>
+
+    <div class="box">
+      <img src="https://cdn.britannica.com/15/201015-050-E24FA163/Field-hockey-match-Poland-Spain-2017.jpg" alt="Hockey" />
+      <h2>Hockey</h2>
+      <p>Improve your skills in hockey.</p>
+    </div>
+
+    <div class="box">
+      <img src="https://cdn.britannica.com/42/254842-050-B9B39A14/mlb-major-league-baseball-first-basemen-freddie-freeman-of-the-los-angeles-dodgers-ninth-inning-against-san-francisco-giants-at-dodger-stadium-los-angeles-california.jpg" alt="Base Ball" />
+      <h2>Base Ball</h2>
+      <p>Push your limits in Base ball disciplines.</p>
+    </div>
+
+    <div class="box">
+      <img src="https://img.freepik.com/premium-vector/sports-academy-logo-illustration_288067-677.jpg" alt="Sports Academy" />
+      <h2>Sports Academies</h2>
+      <p>Choose Academies.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Sports and University Recommendations. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
